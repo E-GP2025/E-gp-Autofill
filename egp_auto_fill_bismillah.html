@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>e-GP Auto Fill – MS BISMILLAH ENTERPRISE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f3f7fb; margin: 0; padding: 10px; color: #222; }
+    h1 { text-align: center; font-size: 20px; margin-bottom: 5px; }
+    h2 { font-size: 16px; margin: 15px 0 8px; border-left: 4px solid #2b7cff; padding-left: 6px; }
+    h3 { font-size: 14px; margin: 10px 0 6px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; justify-content: center; }
+    .nav button { padding: 5px 10px; font-size: 11px; border: none; border-radius: 4px; background: #2b7cff; color: #fff; }
+    .card { background: #fff; border-radius: 6px; padding: 8px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
+    .field { margin-bottom: 8px; }
+    .label { font-size: 12px; font-weight: bold; margin-bottom: 2px; }
+    .row { display: flex; gap: 5px; align-items: center; }
+    input, textarea { width: 100%; padding: 4px 6px; font-size: 12px; border-radius: 4px; border: 1px solid #ccc; box-sizing: border-box; }
+    textarea { min-height: 60px; resize: vertical; }
+    .copy-btn { white-space: nowrap; padding: 4px 8px; font-size: 11px; border-radius: 4px; border: none; background: #28a745; color: #fff; }
+    .small-note { font-size: 10px; color: #666; margin-top: 3px; }
+  </style>
+</head>
+<body>
+
+<h1>e-GP Auto Fill – MS BISMILLAH ENTERPRISE</h1>
+<div style="text-align:center;font-size:11px;margin-bottom:8px;">
+  Proprietor: <b>MD MINTU</b> • Munshiganj Sadar, Munshiganj
+</div>
+
+<div class="nav">
+  <button onclick="document.getElementById('secCommon').scrollIntoView({behavior:'smooth'});">Common Data</button>
+  <button onclick="document.getElementById('secLTM').scrollIntoView({behavior:'smooth'});">LTM</button>
+  <button onclick="document.getElementById('secOTM').scrollIntoView({behavior:'smooth'});">OTM</button>
+  <button onclick="document.getElementById('secRFQ').scrollIntoView({behavior:'smooth'});">RFQ</button>
+</div>
+
+<div id="secCommon">
+  <h2>Common Data – সব টেন্ডারে ব্যবহারের জন্য</h2>
+
+  <div class="card">
+    <h3>১. One-Line Company Info</h3>
+    <div class="field">
+      <div class="label">১-ক্লিক – সব একসাথে</div>
+      <div class="row">
+        <textarea id="common_all">
+MD MINTU, Proprietor, MS BISMILLAH ENTERPRISE, Address: Moddho Courtgaun, Holding 314, Munshiganj Sadar, Munshiganj. Mobile: 01954664495, Email: msbismillahenterprise88@gmail.com, e-TIN: 847409875456, BIN: 004981279-0207, Trade License No: 25592660519000382 (Issue/Renewal Date: 12/07/2025).
+        </textarea>
+        <button class="copy-btn" onclick="copyText('common_all')">Copy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="secLTM">
+  <h2>LTM – Limited Tender Method</h2>
+  <div class="card">
+    <h3>LTM Intro Text</h3>
+    <div class="row">
+      <textarea id="ltm_intro">
+This Quotation is submitted under Limited Tender Method (LTM) in accordance with PPR-2008 and related LGED guidelines...
+      </textarea>
+      <button class="copy-btn" onclick="copyText('ltm_intro')">Copy</button>
+    </div>
+  </div>
+</div>
+
+<div id="secOTM">
+  <h2>OTM – Open Tender Method</h2>
+  <div class="card">
+    <h3>OTM Intro</h3>
+    <div class="row">
+      <textarea id="otm_intro">
+This Tender is submitted under the Open Tender Method (OTM) under PPR-2008...
+      </textarea>
+      <button class="copy-btn" onclick="copyText('otm_intro')">Copy</button>
+    </div>
+  </div>
+</div>
+
+<div id="secRFQ">
+  <h2>RFQ – Request for Quotation</h2>
+  <div class="card">
+    <h3>RFQ Intro</h3>
+    <div class="row">
+      <textarea id="rfq_intro">
+This Quotation is submitted in response to the RFQ issued by the Procuring Entity...
+      </textarea>
+      <button class="copy-btn" onclick="copyText('rfq_intro')">Copy</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function copyText(id) {
+    const el = document.getElementById(id);
+    const text = el.value;
+    navigator.clipboard.writeText(text).then(() => alert("Copied!"));
+  }
+</script>
+
+</body>
+</html>
