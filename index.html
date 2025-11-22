@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-GP AutoFill - MS BISMILLAH ENTERPRISE</title>
+
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+        h1 { text-align: center; font-size: 24px; padding: 10px; background: #003366; color: #fff; }
+        .container { width: 95%; margin: auto; padding: 10px; }
+        .card { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 0 5px #999; }
+        .label { font-weight: bold; margin-bottom: 5px; font-size: 14px; }
+        input, textarea { width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #888; font-size: 14px; }
+        button { width: 100%; background: #0066cc; color: white; padding: 10px; border: none; font-size: 16px; margin-top: 10px; border-radius: 5px; }
+        button:hover { background: #004c99; }
+        .output { background: #eef; padding: 10px; border-radius: 5px; min-height: 100px; white-space: pre-line; }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>e-GP AutoFill - MS BISMILLAH ENTERPRISE</h1>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="label">Company Name</div>
+            <input id="company" value="MS BISMILLAH ENTERPRISE">
+
+            <div class="label">BIN Number</div>
+            <input id="bin" value="004984802-0103">
+
+            <div class="label">Address</div>
+            <textarea id="address">South Mohakhali, Munshiganj Sadar</textarea>
+
+            <div class="label">Phone Number</div>
+            <input id="phone" value="017xxxxxxxx">
+
+            <button onclick="generate()">Generate AutoFill Text</button>
+        </div>
+
+        <div class="card">
+            <h3>Output</h3>
+            <div class="output" id="output"></div>
+        </div>
+
+    </div>
+
+<script>
+function generate() {
+    let company = document.getElementById("company").value;
+    let bin = document.getElementById("bin").value;
+    let address = document.getElementById("address").value;
+    let phone = document.getElementById("phone").value;
+
+    let text = 
+`Company Name: ${company}
+BIN: ${bin}
+Address: ${address}
+Phone: ${phone}
+
+This information is auto-generated for e-GP Tender Submission.`;
+
+    document.getElementById("output").innerText = text;
+}
+</script>
+
+</body>
+</html>
