@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MASTER e-GP AUTO FILL TOOL</title>
+<style>
+body { font-family: Arial; background:#f2f2f2; padding:20px; }
+.container { background:#fff; padding:20px; border-radius:10px; max-width:900px; margin:auto; }
+button { padding:10px; margin:10px 0; background:#28a745; color:white; border:none; border-radius:5px; }
+pre { background:#eee; padding:10px; white-space:pre-wrap; }
+</style>
+<script>
+function copyText(id) {
+  var text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
+  alert("Copied!");
+}
+</script>
+</head>
+<body>
+<div class="container">
+<h1>MASTER e-GP AUTO FILL TOOL<br>MS BISMILLAH ENTERPRISE</h1>
+
+<pre id="full">
+FULL MASTER e-GP AUTO FILL FILE
+For: MD MINTU (MS BISMILLAH ENTERPRISE)
+
+======================
+SECTION 1: TENDERER DETAILS
+======================
+Name: MD MINTU
+Business Name: MS BISMILLAH ENTERPRISE
+Address: Moddho Courtgaun, Holding 314, Munshiganj Sadar, Munshiganj
+Mobile: 01954664495
+Email: msbismillahenterprise88@gmail.com
+E-TIN: 847409875456
+BIN: 004981279-0207
+Trade License: 25592660519000382 (Issue: 12/07/2025)
+
+======================
+SECTION 2: BANK INFORMATION
+======================
+Bank: Rupali Bank
+Branch: Munshiganj Sadar
+Account Name: MS BISMILLAH ENTERPRISE
+Proprietor: MD MINTU
+
+======================
+SECTION 3: GENERAL EXPERIENCE
+======================
+The Tenderer has minimum 1 year experience in supply of goods
+under various Government organizations within Munshiganj Sadar.
+
+======================
+SECTION 4: SPECIFIC EXPERIENCE (FILL WHEN APPLYING)
+======================
+Employer: LGED / Upazila Parishad
+Location: Munshiganj Sadar
+Contract Name: ______________________
+Contract No: ______________________
+Contract Value: ______________________
+Completion Date: ______________________
+Certificate By: ______________________
+Designation: ______________________
+
+======================
+SECTION 5: ANNUAL TURNOVER
+======================
+FY 2022–2023: ______________________
+FY 2023–2024: ______________________
+Average Turnover: ______________________
+
+======================
+SECTION 6: LIQUID ASSET / SOLVENCY
+======================
+Available Liquid Asset: ______________________
+Bank: Rupali Bank
+Branch: Munshiganj Sadar
+
+======================
+SECTION 7: PRICE SCHEDULE (MANDATORY)
+======================
+Item | Qty | Unit | Rate | Total
+---------------------------------------
+_____________________________________
+Grand Total (with VAT/Tax): __________________
+
+======================
+SECTION 8: SPECIFICATION SHEET
+======================
+Item Name: ______________________
+Unit: ______________________
+Brand: ______________________
+Origin: ______________________
+Delivery Time: ______________________
+Compliance: YES
+
+======================
+SECTION 9: DECLARATION
+======================
+I declare that all information is true and correct.
+Name: MD MINTU
+Business: MS BISMILLAH ENTERPRISE
+</pre>
+<button onclick="copyText('full')">Copy Full Auto-Fill</button>
+
+</div>
+</body>
+</html>
